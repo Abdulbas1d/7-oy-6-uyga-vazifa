@@ -1,0 +1,138 @@
+.container_Home {
+    width: 1440px;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding-left: 150px;
+}
+
+.containers {
+    display: flex;
+    gap: 25px;
+}
+
+.container-left {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding-top: 32px;
+
+    h2 {
+        color: #394E6A;
+        font-size: 55px;
+        font-weight: 600;
+        line-height: 68px;
+    }
+
+    p {
+        width: 540px;
+        font-size: 17px;
+        font-weight: 400;
+        color: #394E6A;
+        margin-top: 5px;
+        line-height: 32px;
+    }
+
+    button {
+        width: 150px;
+        height: 45px;
+        color: #DBE1FF;
+        background-color: #057AFF;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        font-size: 15px;
+        font-weight: 450;
+        cursor: pointer;
+    }
+}
+
+.container-right {
+    width: 550px;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    height: 70vh;
+    background-color: #021431;
+    border-radius: 12px;
+    margin-left: 70px;
+
+    .table {
+        max-height: 460px;
+        padding-left: 18px;
+        padding-right: 18px;
+        padding-top: 20px;
+        display: flex;
+    }
+
+    img {
+        width: 340px;
+        height: 450px;
+        border-radius: 12px;
+    }
+}
+
+.container-right::-webkit-scrollbar {
+    height: 10px;
+}
+
+.any {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 1300px;
+    margin: 120px auto;
+
+    .anyProducts {
+        font-size: 28px;
+        font-weight: 500;
+        color: #394E6A;
+    }
+
+    hr {
+        background-color: #E2E8F4;
+        color: #E2E8F4;
+        width: 1180px;
+    }
+}
+
+.cards {
+    width: 1320px;
+    margin: 0 auto;
+    position: relative;
+    bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+
+    .card {
+        width: 28%;
+        padding: 15px;
+        background-color: white;
+        text-align: center;
+        border-radius: 12px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+        img {
+            width: 320px;
+            height: 200px;
+            margin-top: 10px;
+            border-radius: 12px;
+        }
+
+        h4 {
+            margin-top: 10px;
+            font-size: 23px;
+            font-weight: 600;
+            color: #394E6A;
+        }
+
+        h5 {
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: 400;
+            color: #463AA1;
+        }
+    }
+}

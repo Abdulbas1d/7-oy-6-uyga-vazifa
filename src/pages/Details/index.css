@@ -1,0 +1,141 @@
+.wrapper {
+    width: 1440px;
+    margin: 90px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 190px;
+}
+
+.top {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 40px;
+
+    button {
+        outline: none;
+        border: none;
+        background: none;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+        color: #394E6A;
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 500;
+        color: #B5BDC7;
+    }
+}
+
+.wrapperData {
+    max-width: 1440px;
+    display: flex;
+    gap: 70px;
+
+    img {
+        width: 39%;
+        height: 460px;
+        border-radius: 12px;
+    }
+
+    .wrapper-right {
+        width: 50%;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h3 {
+            font-size: 35px;
+            font-weight: 610;
+            letter-spacing: 0.5px;
+            color: #394E6A;
+        }
+
+        h5 {
+            font-size: 25px;
+            font-weight: 450;
+            letter-spacing: 0.25px;
+            color: #C7C9D1;
+        }
+
+        .price {
+            color: #395182;
+            font-size: 22px;
+            letter-spacing: 0.3px;
+            font-weight: 400;
+        }
+
+        .desc {
+            width: 450px;
+            color: #394E6A;
+            font-size: 14.3px;
+            font-weight: 500;
+            margin-top: 15px;
+            line-height: 30px;
+        }
+
+        .color {
+            color: #394E6A;
+            font-size: 18px;
+            font-weight: 500;
+            margin-top: 25px;
+            letter-spacing: 1px;
+        }
+
+        .btns {
+            display: flex;
+            gap: 10px;
+
+            button {
+                width: 30px;
+                height: 30px;
+                border: none;
+                outline: none;
+                border-radius: 30px;
+            }
+        }
+
+        label {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 15px;
+            font-size: 20px;
+            font-weight: 600;
+            color: #394E6A;
+
+            select {
+                width: 360px;
+                height: 50px;
+                outline: none;
+                border: none;
+                border-radius: 12px;
+                padding: 15px;
+                border: 2px solid #463AA1;
+            }
+        }
+
+        .add {
+            width: 130px;
+            height: 50px;
+            outline: none;
+            border: none;
+            background-color: #463AA1;
+            color: #fff;
+            border-radius: 14px;
+            margin-top: 15px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+
+        .add:hover {
+            color: #463AA1;
+            background-color: #fff;
+            border: 2px solid #463AA1;
+            font-weight: 700;
+        }
+    }
+}
