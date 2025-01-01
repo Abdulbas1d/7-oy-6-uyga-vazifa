@@ -1,9 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react';
 import './index.css'
-import { useNavigate, useParams } from 'react-router-dom';
+import { data, useNavigate, useParams } from 'react-router-dom';
 import { api } from '../../axios';
 import { CountCart } from '../../App';
 import toast, { Toaster } from 'react-hot-toast';
+import { useDispatch } from 'react-redux';
+import { add, remove, clear, update } from '../../store/cartSlice';
 
 function Details() {
     const [products, setProducts] = useState({});
@@ -12,6 +14,7 @@ function Details() {
     const { count, setCount } = useContext(CountCart);
     const { id } = useParams();
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     useEffect(() => {
         api.get(`api/products/${id}`)
@@ -51,6 +54,8 @@ function Details() {
             amount
         };
 
+        dispatch(add(card))
+
         toast.success("Cart muvaffaqiyatli qo'shildi!")
 
         let margeCart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -61,7 +66,7 @@ function Details() {
     return (
         products?.id && (
             <div className="wrapper">
-                <Toaster />
+                <Toaster /> 
                 
                 <div className="top">
                     <button onClick={handleToHomePage}>Home</button>
@@ -86,7 +91,7 @@ function Details() {
                                 <button
                                     key={color}
                                     type="button"
-                                    style={{ backgroundColor: color }}
+                                    style={{ backgroundColor: color, border: productColor === color ? `2px solid black` : '' }}
                                     onClick={() => setProductColor(color)}
                                 ></button>
                             ))}
