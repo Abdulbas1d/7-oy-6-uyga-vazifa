@@ -43,7 +43,7 @@ function Details() {
     function handleAddCard(event) {
         event.preventDefault();
 
-        const card = {
+        let card = {
             cartId: products.id + productColor,
             productId: products.id,
             image: products.attributes.image,

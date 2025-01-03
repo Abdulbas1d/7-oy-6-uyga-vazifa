@@ -6,22 +6,14 @@ import { NavLink } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 function Header() {
-  const [count, setCount] = useState(0)
+  const [counter, setCounter] = useState(10)
   const cart = useSelector(state => state.cart)
 
-  console.log(cart);
-
   useEffect(() => {
-    let sum = 0
-    cart.length > 0 && cart.forEach(value => {
-      console.log(value);
-      if (value.count && !isNaN(Number(value.count))) {
-        sum += Number(value.count)
-      }
-    })
+    const sum = cart.reduce((cart, item) => cart + (item.amount || 0), 0);
+    setCounter(sum);
+  }, [cart]);
 
-    setCount(sum)
-  }, [cart])
 
   return (
     <div className="container">
@@ -39,11 +31,7 @@ function Header() {
           <img className='shopping' src={CartPicture} alt="" />
         </div>
 
-        <p className='counter'>{count}</p>
-
-        {
-          console.log(count)
-        }
+        <p className='counter'>{counter}</p>
       </header>
     </div>
   )

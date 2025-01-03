@@ -1,0 +1,203 @@
+.card_container {
+    max-width: 1140px;
+    margin: 0 auto;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card_title {
+    font-size: 30px;
+    font-weight: 450;
+    color: #394E6A;
+}
+
+.hr {
+    position: relative;
+    bottom: 37px;
+    opacity: 0.4;
+}
+
+.aboutCard {
+    display: flex;
+    gap: 55px;
+    margin-bottom: 25px;
+}
+
+.differentCard {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .anyCard {
+        max-width: 810px;
+        padding: 25px;
+        display: flex;
+        gap: 20px;
+        border-bottom: 2px solid rgb(227, 219, 219);
+
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 12px;
+        }
+
+        .dataOne {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-left: 40px;
+            margin-top: 5px;
+
+            h4 {
+                font-size: 18px;
+                font-weight: 600;
+                color: #394E6A;
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: 400;
+                color: #C7C9D1;
+            }
+
+            label {
+                font-size: 16px;
+                font-weight: 500;
+                color: #394E6A;
+                letter-spacing: 0.7px;
+                display: flex;
+                gap: 10px;
+
+                span {
+                    width: 25px;
+                    height: 25px;
+                    border: none;
+                    border-radius: 20px;
+                }
+            }
+        }
+
+        .dataTwo {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-left: 115px;
+            margin-top: 5px;
+
+            label {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                font-size: 17px;
+                font-weight: 400;
+                color: #394E6A;
+
+                select {
+                    width: 62px;
+                    height: 28px;
+                    padding: 4px;
+                    margin-left: 3px;
+                    background: none;
+                    border: none;
+                    outline: none;
+                    border: 1px solid grey;
+                    border-radius: 10px;
+                }
+            }
+
+            #remove {
+                border: none;
+                outline: none;
+                border-radius: 12px;
+                padding: 5px;
+                font-size: 17.5px;
+                font-weight: 500;
+                letter-spacing: 0.5px;
+                position: relative;
+                bottom: 5px;
+                right: 3px;
+                color: #057AFF;
+                background: none;
+            }
+
+            #remove:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .price {
+            margin-left: 90px;
+            margin-top: 5px;
+            letter-spacing: 0.7px;
+            font-size: 19px;
+            font-weight: 600;
+            color: #394E6A;
+        }
+    }
+}
+
+.resultPrice {
+    display: flex;
+    flex-direction: column;
+
+    .result {
+        width: 330px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 28px 38px 28px 38px;
+        background-color: #F0F6FF;
+        border-radius: 15px;
+        margin-bottom: 37px;
+
+        span {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 15px;
+            color: #394E6A;
+            padding-bottom: 5px;
+            border-bottom: 2px solid rgb(230, 230, 230);
+
+            strong {
+                font-size: 17px;
+                font-weight: 600;
+                position: relative;
+                bottom: 4px;
+            }
+        }
+
+        .res {
+            border: none;
+            font-size: 17px;
+            margin-top: 15px;
+
+            strong {
+                font-size: 20px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .login {
+        width: 330px;
+        height: 45px;
+        border: none;
+        outline: none;
+        border-radius: 12px;
+        background-color: #057AFF;
+        color: #DBE1FF;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+
+    .login:hover {
+        color: #057AFF;
+        border: 2px solid #057AFF;
+        background-color: #DBE1FF;
+        font-weight: 800;
+        font-size: 20px;
+    }
+}

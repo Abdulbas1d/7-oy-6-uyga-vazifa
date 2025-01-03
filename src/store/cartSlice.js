@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = []
+const initialState = JSON.parse(localStorage.getItem('cart')) || [];
 
 const cartSlice = createSlice({
     name: "cart",
@@ -9,21 +9,24 @@ const cartSlice = createSlice({
         add: (state, action) => {
             const exist = state.find(value => value.id == action.payload.id && action.payload.color == value.color)
             if (exist) {
-                exist.count += action.payload.count
+                exist.amount += action.payload.amount
             } else {
-                state.push({...action.payload, count: action.payload.count})
+                state.push({ ...action.payload, amount: action.payload.amount })
             }
         },
+        cart(state, action) {
+            return action.payload;
+        },
         remove: (state, action) => {
-            state.filter(value => value.id != action.payload.id && action.payload.color == value.color)
+            return state.filter(value => value.id != action.payload.id && action.payload.color == value.color)
         },
         clear: (state, action) => {
-            state = []
+            return []
         },
         update: (state, action) => {
             state.map(value => {
                 if (value.id == action.payload.id && action.payload.color == value.color) {
-                    value.count = action.payload.count
+                    value.amount = action.payload.amount
                 }
                 return value
             })
@@ -32,4 +35,4 @@ const cartSlice = createSlice({
 })
 
 export default cartSlice.reducer;
-export const { add, remove, clear, update } = cartSlice.actions;
+export const { add, remove, clear, update, cart } = cartSlice.actions;

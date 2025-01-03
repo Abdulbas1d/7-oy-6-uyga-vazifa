@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 .container {
     width: 100%;
     background-color: #d6e3f8;
@@ -74,8 +78,8 @@
         position: relative;
         right: 60px;
         top: 8px;
-        width: 20px;
-        height: 20px;
+        height: 22px;
+        padding-right: 5px;
         padding-left: 5px;
         border-radius: 5px;
         background-color: yellow;
